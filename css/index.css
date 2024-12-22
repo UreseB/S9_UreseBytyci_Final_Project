@@ -1,4 +1,6 @@
-/*  */
+* {
+  overflow-x: hidden;
+}
 
 @font-face {
   font-family: "DM Sans";
