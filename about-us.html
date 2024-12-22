@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <title>Rreth nesh</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rubik+Broken+Fax&family=Rubik+Lines&display=swap");
+  </style>
+  <style>
+
+  </style>
+  <link rel="stylesheet" href="css/about-us.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <canvas id="headerCanvas"></canvas>
+    <nav class="nav-container">
+      <img src="img/loggo.png" alt="" class="logo">
+      <h1><a class="header-link" href="/">Golden Glow</a></h1>
+
+      <ul id="linqet_e_navigimit">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/products.html">Our products</a></li>
+        <li><a href="/contact-us.html">Contact us</a></li>
+        <li><a href="/about-us.html">About us</a></li>
+        <a class="header-link" href="/log-in.html"><button id="signupBtn"> Log in
+          </button></a>
+      </ul>
+    </nav>
+    <i id="bar" class="fas fa-bars" aria-hidden="true"></i>
+  </header>
+
+  <section class="about-section">
+    <h1>Welcome to Golden Glow</h1>
+    <p class="description">
+      Welcome to Golden Glow, your ultimate destination for skincare, body care, and makeup products designed to elevate
+      your natural beauty. We believe in empowering everyone to feel confident and radiant in their own skin.
+    </p>
+    <p class="description">
+      At Golden Glow, we carefully select products that combine the finest ingredients with innovative formulas to
+      provide exceptional care for your skin and body. Whether you’re enhancing your daily routine or preparing for a
+      special occasion, our collection is crafted to meet your needs and highlight your glow.
+    </p>
+    <p class="description">
+      Discover the art of self-care with Golden Glow – where beauty begins from within.
+    </p>
+
+    <div class="team-container">
+      <div class="team-member">
+        <img src="/img/girl.png" alt="CEO" />
+        <h3>Urese Bytyci</h3>
+        <p>CEO</p>
+        <button class="details-btn" data-name="Urese Bytyci" data-role="CEO">
+          Details
+        </button>
+      </div>
+      <div class="team-member">
+        <img src="/img/boy.png" alt="Manager" />
+        <h3>Filan Fisteku</h3>
+        <p>Manager</p>
+        <button class="details-btn" data-name="Filan Fisteku" data-role="Manager">
+          Details
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="image-alignment">
+    <h3>Team at work</h3>
+    <div class="team-content">
+
+      <img src="/img/team-right.jpg" alt="Ekipi në të djathtë" />
+      <p>
+        At Golden Glow, our team is a blend of passionate beauty enthusiasts, skincare experts, and creative innovators
+        dedicated to bringing you the best in skincare, body care, and makeup.
+      </p>
+    </div>
+    <div class="team-content">
+      <p>
+        We share a common goal: to empower you with products that celebrate your individuality and enhance your natural
+        beauty. Our experts work tirelessly to curate high-quality products that align with our values of care,
+        inclusivity, and excellence.
+      </p>
+    </div>
+    <div class="team-content">
+      <p>
+        Every glow-up starts with a strong foundation, and that’s exactly what our team strives to provide – exceptional
+        service, trusted expertise, and a commitment to helping you feel radiant every day.
+      </p>
+    </div>
+    <div class="team-content">
+      <p>
+        Together, we’re here to inspire confidence and redefine beauty, one glow at a time.
+      </p>
+    </div>
+  </section>
+
+
+
+  <button class="scroll-top-btn">↑</button>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <img src="/img/loggo.png" alt="Golden Glow Logo" class="logo">
+        <p>Golden Glow - Shine Every Day!</p>
+      </div>
+      <!-- Links Section -->
+      <div class="footer-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </div>
+      <!-- Newsletter Section -->
+      <div class="footer-newsletter">
+        <h3>Subscribe</h3>
+        <p>Subscribe to get the best deals!</p>
+        <form>
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <p>© 2024 Golden Glow. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    $(document).ready(function () {
+
+      const bar = $("#bar");
+      const navLinks = $("#linqet_e_navigimit");
+
+      bar.click(function () {
+        const isHidden = navLinks.css("right") === "-300px";
+        navLinks.css("right", isHidden ? "0" : "-300px");
+      });
+      $(".details-btn").click(function () {
+        const name = $(this).data("name");
+        const role = $(this).data("role");
+        alert(`${name} is our ${role}`);
+      });
+
+      $(".description").hide().fadeIn(1500);
+
+      $(".team-member").hide();
+      $(".team-member").each(function (index) {
+        $(this)
+          .delay(300 * index)
+          .slideDown(1000);
+      });
+
+      const $scrollTopBtn = $(".scroll-top-btn");
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+          $scrollTopBtn.fadeIn();
+        } else {
+          $scrollTopBtn.fadeOut();
+        }
+      });
+
+      $scrollTopBtn.click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+      });
+
+      $("header").hover(
+        function () {
+          $(this).animate(
+            { backgroundColor: "#e60073", padding: "0px" },
+            500
+          );
+        },
+        function () {
+          $(this).animate(
+            { backgroundColor: "#ff6699", padding: "0px" },
+            500
+          );
+        }
+      );
+    });
+  </script>
+  <script src="js/canvas.js"></script>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

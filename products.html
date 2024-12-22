@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produktet</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rubik+Broken+Fax&family=Rubik+Lines&display=swap");
+  </style>
+  <link rel="stylesheet" href="css/products.css">
+  
+</head>
+
+<body>
+  <header>
+    <canvas id="headerCanvas"></canvas>
+    <nav class="nav-container">
+      <img src="img/loggo.png" alt="" class="logo">
+      <h1><a class="header-link" href="/">Golden Glow</a></h1>
+
+      <ul id="linqet_e_navigimit">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/products.html">Our products</a></li>
+        <li><a href="/contact-us.html">Contact us</a></li>
+        <li><a href="/about-us.html">About us</a></li>
+        <a class="header-link" href="/log-in.html"><button id="signupBtn"> Log in
+          </button></a>
+      </ul>
+    </nav>
+    <i id="bar" class="fas fa-bars" aria-hidden="true"></i>
+  </header>
+  <h1 class="products-title" align="center">Te gjitha produktet</h1>
+  <div class="sort-buttons">
+    <button onclick="sortProducts('price')">
+      <i>Filtro sipas cmimit</i>
+    </button>
+    <button onclick="sortProducts('sales')">
+      <i>Filtro nga me te blerat</i>
+    </button>
+  </div>
+  <div class="product-container" id="productContainer"></div>
+
+  <script>
+    const products = [
+      {
+        name: "Natural Anti-Aging Face Kit For Men & Women with Face Serum & Face Wash",
+        price: 23.50,
+        image: "/img/product-img/produkti1.jpg",
+        category: "SkinCare",
+        description: "Anti-aging",
+        sales: 420,
+      },
+      {
+        name: "ORIENSE PROFESSIONAL 500ml Body Lotion Amber & Vanilla",
+        price: 13.50,
+        image: "/img/product-img/produkti2.jpg",
+        category: "SkinCare",
+        description: "It helps to protect, moisturize, and revitalizes your body in all weather condition with vitamin E and moringa oil. For all skin types.",
+        sales: 300,
+      },
+      {
+        name: "Garnier Skin Naturals Fresh Eye Make-Up Remover 125ml",
+        price: 4.50,
+        image: "/img/product-img/produkti3.jpg",
+        category: "SkinCare",
+        description: "This solution, enhanced with apple extract, melts makeup flawlessly, leaving the sensitive skin around the eyes feeling calmed",
+        sales: 900,
+      },
+      {
+        name: "Skin Whitening",
+        price: 6.99,
+        image: "/img/product-img/skin-whitning_1_800x.webp",
+        category: "SkinCrae",
+        description: "Pills will help you get rid of unpleasant dark spots ",
+        sales: 440,
+      },
+      {
+        name: "HUDA BEAUTY #FauxFilter Luminous Matte Foundation Select Shades, 1.18 oz",
+        price: 42.00,
+        image: "/img/product-img/produkti5.jpg",
+        category: "Makeup",
+        description:
+          " This cult-favorite foundation promises full, long-lasting coverage with a luminous matte finish, so you can achieve a flawless complexion that lasts all day and night.",
+        sales: 900,
+      },
+      {
+        name: "Super-Stay-Matte-Pen-Lipstick",
+        price: 3.50,
+        image: "/img/product-img/produkti8.jpg",
+        category: "Makeup",
+        description: "Matte lipstick",
+        sales: 120,
+      },
+      {
+        name: "Ever Matte Lip Liquid - Buy Luxurious Ever Matte Lip Liquid",
+        price: 5.99,
+        image: "/img/product-img/produkti7.jpg",
+        category: "Makeup",
+        description: "Ever Matte Lip Liquid, Saudi National Day Offer",
+        sales: 100,
+      },
+
+      {
+        name: "Professional Eyebrow",
+        price: 9.0,
+        image: "/img/product-img/produkti9.jpg",
+        category: "Makeup",
+        description: "Professional Eyebrow",
+        sales: 190,
+      },
+      {
+        name: "Aloe Vera Body Lotion (500 ml)",
+        price: 20.0,
+        image: "/img/product-img/produkti10.png",
+        category: "Bodycare",
+        description:
+          "Effectively regenerating and softening moisturizing lotion with 90% ACTIValoe®, which can be used for the whole body. ",
+        sales: 700,
+      },
+      {
+        name: "Derma Eco Bodylotion - 400 m - zeroallergy.eu",
+        price: 9.59,
+        image: "/img/product-img/produkti11.webp",
+        category: "Bodycare",
+        description: "Derma ECO Body Lotion is a nourishing body lotion with organic coconut oil, sheaguts and vitamin E that helps preserve the skin's elasticity and natural balance. ",
+        sales: 400,
+      },
+      {
+        name: "Hand cream, Hemp-Milk Thistle-100 ml -CANABO - Margaret Mayar",
+        price: 4.0,
+        image: "/img/product-img/produkti12.jpg",
+        category: "Bodycare",
+        description: "18% of the regeneration complex,Dehydrated and very dry skin,Long-lasting moisturizing and firming",
+        sales: 550,
+      },
+      {
+        name: "Pomegranate Infused Body Glow | Sobha Natural",
+        price: 15.60,
+        image: "/img/product-img/produkti13.jpg",
+        category: "Bodycare",
+        description: "Hydrating body lotion for a healthy glowing skin. Gently wash away impurities for fresher , softer skin which feels rejuvenated all day!!",
+        sales: 520,
+      },
+    ];
+
+    const sortWorker = new Worker("js/sortWorker.js");
+
+    sortWorker.onmessage = function (event) {
+      const sortedProducts = event.data;
+      renderProducts(sortedProducts);
+    };
+
+    function sortProducts(criteria) {
+      sortWorker.postMessage({ products, criteria });
+    }
+
+    function renderProducts(productList) {
+      const productContainer = document.getElementById("productContainer");
+      productContainer.innerHTML = productList
+        .map(
+          (product, index) => `
+    <div class="product-card" data-id="${index}" onclick="goToProduct(${index})">
+      <img src="${product.image}" alt="${product.name}">
+      <b>${product.name}</b>
+      <p>${product.description}</p>
+      <p><strong>Cmimi:</strong><u>${product.price}€</u></p>
+    </div>
+  `
+        )
+        .join("");
+    }
+
+    function goToProduct(productId) {
+      const product = products[productId];
+      localStorage.setItem("selectedProduct", JSON.stringify(product));
+      window.open("product-page.html", "_blank");
+    }
+
+    renderProducts(products);
+  </script>
+  
+<script src="js/index.js"></script>
+  <script src="js/canvas.js"></script>
+</body>
+
+</html>

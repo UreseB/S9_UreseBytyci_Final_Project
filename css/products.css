@@ -1,0 +1,307 @@
+.logo {
+  width: 100px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ceb1b1;
+}
+
+.products-title {
+  text-transform: capitalize;
+  color: Black;
+  text-shadow: 2px 2px rgb(192, 144, 173);
+  ;
+  margin-top: 24px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: rgb(218, 172, 172);
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 300px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  color: #ff6699;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.sort-buttons {
+  text-align: center;
+  margin: 20px;
+}
+
+.sort-buttons button {
+  background-color: rgb(192, 144, 173);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.sort-buttons button:hover {
+  background-color: rgb(174, 101, 180);
+}header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.header-link {
+  text-decoration: none;
+  color: rgb(219, 142, 190);
+  padding-right: 300px ;
+}
+
+.header-link:active {
+  color: rgb(219, 142, 190);
+  text-decoration: none;
+}
+
+.header-link:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-link:visited {
+  color: rgb(219, 142, 190);
+  text-decoration: none;
+}
+
+#headerCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+h1 {
+  font-size: 30px;
+  margin: 0;
+  color: rgb(219, 142, 190);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 0 15px;
+}
+
+ul li a {
+  text-decoration: none;
+  color:rgb(219, 142, 190);
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: rgb(142, 103, 127);
+}
+
+#signupBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: rgb(193, 113, 162);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#signupBtn:hover {
+  background-color: rgb(142, 103, 127);
+  transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 991px) {
+  .nav-container {
+    padding: 16px 48px;
+  }
+
+  .nav-container h1 {
+    font-size: 25.6px;
+  }
+
+  #linqet_e_navigimit {
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 24px;
+    right: -300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100000;
+    margin-top: 67.2px;
+    transition: 0.5s;
+  }
+
+  #signupBtn {
+    margin-left: 115px;
+  }
+
+  #linqet_e_navigimit li {
+    padding-right: 0;
+    padding: 20px 0;
+  }
+
+  #linqet_e_navigimit li a {
+    font-size: 19.2px;
+    color: white;
+    border: 2px solid white;
+  }
+
+
+
+  #bar {
+    margin-right: 20px;
+    display: initial;
+    cursor: pointer;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .logo {
+    width: 70px; 
+  }
+
+  .products-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .product-card {
+    width: 100%; 
+    padding: 10px;
+  }
+
+  #linqet_e_navigimit {
+    font-size: 0.9rem;
+    height: auto;
+  }
+
+  #signupBtn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .logo {
+    width: 80px; 
+  }
+
+  .nav-container {
+    flex-wrap: wrap; 
+    padding: 10px 30px;
+  }
+
+  .products-title {
+    font-size: 2rem;
+  }
+
+  .product-container {
+    gap: 15px; 
+  }
+
+  .product-card {
+    width: 45%; 
+  }
+
+  #linqet_e_navigimit li {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .nav-container {
+    padding: 16px 20px;
+  }
+
+  .product-card {
+    width: 30%; 
+  }
+
+  .products-title {
+    font-size: 2.2rem;
+  }
+
+  #linqet_e_navigimit li a {
+    font-size: 1rem;
+  }
+
+  #signupBtn {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product-container {
+    gap: 25px; 
+  }
+
+  .product-card {
+    width: 22%; 
+  }
+
+  .products-title {
+    font-size: 2.5rem;
+  }
+
+  .logo {
+    width: 120px; 
+  }
+}

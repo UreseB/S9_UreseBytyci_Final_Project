@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden glow</title>
+  <link rel="stylesheet" href="css/index.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <header>
+    <canvas id="headerCanvas"></canvas>
+    <nav class="nav-container">
+      <img src="img/loggo.png" alt="" class="logo">
+      <h1><a class="header-link" href="/">Golden Glow</a></h1>
+
+      <ul id="linqet_e_navigimit">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/products.html">Our products</a></li>
+        <li><a href="/contact-us.html">Contact us</a></li>
+        <li><a href="/about-us.html">About us</a></li>
+
+        <a class="header-link" href="/log-in.html"><button id="signupBtn"> Log in
+          </button></a>
+      </ul>
+    </nav>
+    <i id="bar" class="fas fa-bars" aria-hidden="true"></i>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Welcome to Golden Glow</h2>
+    <p>Discover elegance and brilliance with Golden Glow, where beauty meets quality.</p>
+    <a href="/products.html"><button>Our Products</button></a>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories" id="categories">
+    <h2>Explore our curated collection and discover what makes us shine.</h2>
+    <ul>
+      <li>
+        <img src="/img/skincare.jpg" alt="Skincare" onclick="scrollToSection('skincare')" />
+        <p>Skincare</p>
+      </li>
+      <li>
+        <img src="/img/make up.jpg" alt="Makeup" onclick="scrollToSection('makeup')" />
+        <p>Makeup</p>
+      </li>
+      <li>
+        <img src="/img/bodycare.jpg" alt="Body Care" onclick="scrollToSection('bodycare')" />
+        <p>Bodycare</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="products" id="products">
+    <h2>Best-selling products</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="goToProductPage('Cerave Moisturizing Lotion 12 Oz')"
+        data-product="Cerave Moisturizing Lotion 12 Oz" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 2 s.jpg" alt="Cerave Moisturizing Lotion 12 Oz" />
+        </div>
+        <h3>Cerave Moisturizing Lotion 12 Oz</h3>
+        <p>12.29€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card" onclick="goToProductPage('CRY-Lash Serum')" data-product="CRY-Lash Serum"
+        draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 2.webp" alt="CRY-Lash Serum" />
+        </div>
+        <h3>CRY-Lash Serum</h3>
+        <p>12.50€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card" onclick="goToProductPage('Inlief Complete Skincare Duo:Body wash And Body lotion Set')"
+        data-product="Inlief Complete Skincare Duo:Body wash And Body lotion Set" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 1 b.jpg"
+            alt="Inlief Complete Skincare Duo:Body wash And Body lotion Set" />
+        </div>
+        <h3>Inlief Complete Skincare Duo:Body wash And Body lotion Set</h3>
+        <p>40.00€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card" onclick="goToProductPage('MAYBELLINE Lash Sensational Mascara, 02 - Very Black')"
+        data-product="MAYBELLINE Lash Sensational Mascara, 02 - Very Black" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 4.jpg" alt="MAYBELLINE Lash Sensational Mascara, 02 - Very Black" />
+        </div>
+        <h3>MAYBELLINE Lash Sensational Mascara, 02 - Very Black</h3>
+        <p>9.40€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="skincare">
+    <h2>Skincare</h2>
+    <div class="product-grid">
+      <div class="product-card"
+        onclick="goToProductPage('La Roche-Posay Toleriane Hydrating Gentle Cleanser - 13.52 fl oz')"
+        data-product="La Roche-Posay Toleriane Hydrating Gentle Cleanser - 13.52 fl oz" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 1 s.jpg"
+            alt="La Roche-Posay Toleriane Hydrating Gentle Cleanser - 13.52 fl oz" />
+        </div>
+        <h3>La Roche-Posay Toleriane Hydrating Gentle Cleanser - 13.52 fl oz</h3>
+        <p>17.99€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card" onclick="goToProductPage('Cerave Moisturizing Lotion 12 Oz')"
+        data-product="Cerave Moisturizing Lotion 12 Oz" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 2 s.jpg" alt="Cerave Moisturizing Lotion 12 Oz" />
+        </div>
+        <h3>
+          Cerave Moisturizing Lotion 12 Oz
+        </h3>
+        <p>12.29€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card" onclick="goToProductPage('Lrp Anthelios Xl Anti Brillos 50 Spf 50 Ml')"
+        data-product="Lrp Anthelios Xl Anti Brillos 50 Spf 50 Ml" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 3 s.jpg" alt="iLrp Anthelios Xl Anti Brillos 50 Spf 50 Ml" />
+        </div>
+        <h3>
+          Lrp Anthelios Xl Anti Brillos 50 Spf 50 Ml
+        </h3>
+        <p>27.40€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card" onclick="goToProductPage('Neutrogena Acne Wash, Oil-Free 9.1 fl oz | Shop | Hurley')"
+        data-product="Neutrogena Acne Wash, Oil-Free 9.1 fl oz | Shop | Hurley's" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 4 s.jpg"
+            alt="Neutrogena Acne Wash, Oil-Free 9.1 fl oz | Shop | Hurley's" />
+        </div>
+        <h3>
+          Neutrogena Acne Wash, Oil-Free 9.1 fl oz | Shop | Hurley's
+        </h3>
+        <p>11.39€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="makeup">
+    <h2>Makeup</h2>
+    <div class="product-grid">
+      <div class="product-card"
+        onclick="goToProductPage('Maybelline 4 In 1 Glow Makeup, Perfector, Medium 02 0.68 Fl Oz |...')"
+        data-product="Maybelline 4 In 1 Glow Makeup, Perfector, Medium 02 0.68 Fl Oz |..." draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkti 1.png"
+            alt="Maybelline 4 In 1 Glow Makeup, Perfector, Medium 02 0.68 Fl Oz |..." />
+        </div>
+        <h3>Maybelline 4 In 1 Glow Makeup, Perfector, Medium 02 0.68 Fl Oz |...</h3>
+        <p>35.95€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card" onclick="goToProductPage('CRY-Lash Serum')" data-product="CRY-Lash Serum"
+        draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 2.webp" alt="CRY-Lash Serum" />
+        </div>
+        <h3>CRY-Lash Serum</h3>
+        <p>12.50€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card"
+        onclick="goToProductPage('Hollywood Glow & Contour Kit: Contour, Highlight And Beauty...')"
+        data-product="Hollywood Glow & Contour Kit: Contour, Highlight And Beauty..." draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkti 3.jpg"
+            alt="Hollywood Glow & Contour Kit: Contour, Highlight And Beauty..." />
+        </div>
+        <h3>Hollywood Glow & Contour Kit: Contour, Highlight And Beauty...</h3>
+        <p>13.75€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card" onclick="goToProductPage('MAYBELLINE Lash Sensational Mascara, 02 - Very Black')"
+        data-product="MAYBELLINE Lash Sensational Mascara, 02 - Very Black" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 4.jpg" alt="MAYBELLINE Lash Sensational Mascara, 02 - Very Black" />
+        </div>
+        <h3>MAYBELLINE Lash Sensational Mascara, 02 - Very Black</h3>
+        <p>9.40€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="bodycare">
+    <h2>Bodycare</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="goToProductPage('Inlief Complete Skincare Duo:Body wash And Body lotion Set')"
+        data-product="Inlief Complete Skincare Duo:Body wash And Body lotion Set" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 1 b.jpg"
+            alt="Inlief Complete Skincare Duo:Body wash And Body lotion Set" />
+        </div>
+        <h3>Inlief Complete Skincare Duo:Body wash And Body lotion Set</h3>
+        <p>40.00€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card"
+        onclick="goToProductPage('Attitude Baby Leaves 2-in-1 Hair & Body Foaming Wash Pear Nectar 10oz')"
+        data-product="Attitude Baby Leaves 2-in-1 Hair & Body Foaming Wash Pear Nectar 10oz" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 2 b.jpg"
+            alt="Attitude Baby Leaves 2-in-1 Hair & Body Foaming Wash Pear Nectar 10oz" />
+        </div>
+        <h3>Attitude Baby Leaves 2-in-1 Hair & Body Foaming Wash Pear Nectar 10oz</h3>
+        <p>29.95€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card"
+        onclick="goToProductPage('Rudolph Care Açai Body Balm, 145 ml - Cosmeterie Online Shop')"
+        data-product="Rudolph Care Açai Body Balm, 145 ml - Cosmeterie Online Shop" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 3 b.jpg"
+            alt="Rudolph Care Açai Body Balm, 145 ml - Cosmeterie Online Shop" />
+        </div>
+        <h3>Rudolph Care Açai Body Balm, 145 ml - Cosmeterie Online Shop</h3>
+        <p>65..00€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+
+      <div class="product-card" onclick="goToProductPage('Dove-Body Love Intensive Care Body Lotion, 400 ml')"
+        data-product="Dove-Body Love Intensive Care Body Lotion, 400 ml" draggable="true">
+        <div class="image-container">
+          <img src="/img/product-img/produkt 4 b.jpg"
+            alt="Dove-Body Love Intensive Care Body Lotion, 400 mlqumësht-trupi-me-orkide-vanilje" />
+        </div>
+        <h3>Dove-Body Love Intensive Care Body Lotion, 400 ml</h3>
+        <p>5.55€</p>
+        <button class="check-details-btn">More details</button>
+        <button class="wishlist-btn" title="Shto në listën e dëshirave">
+          &#9825;
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-logo">
+        <img src="/img/loggo.png" alt="Golden Glow Logo" class="logo">
+        <p>Golden Glow - Shine Every Day!</p>
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h3>Subscribe</h3>
+        <p>Subscribe to get the best deals!</p>
+        <form>
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Golden Glow. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+<script>
+  const draggables = document.querySelectorAll(".product-card");
+  const wishlistBtns = document.querySelectorAll(".wishlist-btn");
+  const wishlist = document.getElementById("wishlist");
+
+  function createPreviewElement(productName) {
+    const preview = document.createElement("div");
+    preview.textContent = productName;
+    preview.classList.add("wishlist-preview");
+    return preview;
+  }
+
+  function saveWishlist(item) {
+    let wishlistItems =
+      JSON.parse(localStorage.getItem("wishlistItems")) || [];
+    if (!wishlistItems.includes(item)) {
+      wishlistItems.push(item);
+      localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
+    }
+  }
+
+  function loadWishlist() {
+    const wishlistItems =
+      JSON.parse(localStorage.getItem("wishlistItems")) || [];
+    wishlist.innerHTML = "";
+    if (wishlistItems.length === 0) {
+      wishlist.textContent = "Shto produkte ketu";
+    } else {
+      wishlistItems.forEach((item) => {
+        const productEntry = createPreviewElement(item);
+        wishlist.appendChild(productEntry);
+      });
+    }
+  }
+
+  document.getElementById("clearWishlist").addEventListener("click", () => {
+    localStorage.removeItem("wishlistItems");
+    loadWishlist();
+  });
+
+  wishlistBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const productName = btn
+        .closest(".product-card")
+        .getAttribute("data-product");
+      saveWishlist(productName);
+      loadWishlist();
+    });
+  });
+
+  draggables.forEach((item) => {
+    item.addEventListener("dragstart", () => {
+      item.classList.add("dragging");
+    });
+
+    item.addEventListener("dragend", () => {
+      item.classList.remove("dragging");
+    });
+  });
+
+  wishlist.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    wishlist.classList.add("dragover");
+  });
+
+  wishlist.addEventListener("dragleave", () => {
+    wishlist.classList.remove("dragover");
+  });
+
+  wishlist.addEventListener("drop", (e) => {
+    e.preventDefault();
+    wishlist.classList.remove("dragover");
+
+    const draggedItem = document.querySelector(".dragging");
+    if (draggedItem) {
+      const productName = draggedItem.getAttribute("data-product");
+      saveWishlist(productName);
+      loadWishlist();
+    }
+  });
+
+  window.addEventListener("DOMContentLoaded", loadWishlist);
+
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    const headerOffset = document.querySelector("header").offsetHeight;
+    const elementPosition = section.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+
+  function goToProductPage(product) {
+    window.location.href = `/product-page.html?product=${product}`;
+  }
+</script>
+<script src="js\canvas.js"></script>
+	<script src="js/index.js"></script>
+
+</html>

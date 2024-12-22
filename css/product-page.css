@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+    background-color: #ceb1b1;
+    color: #333;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    margin: 0 15px;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  ul li a:hover {
+    color: #ffccd5;
+  }
+
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .product-image {
+    position: relative;
+    width: auto;
+    padding: 10px;
+    height: auto;
+    max-height: 350px;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .product-details {
+    flex: 1 1 50%;
+    padding: 20px;
+  }
+
+  .product-details h2 {
+    color: rgb(174, 101, 180);
+    margin-top: 0;
+  }
+
+  .price {
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  .description {
+    margin: 20px 0;
+    color: #666;
+  }
+
+  .add-to-cart-btn {
+    background-color: rgb(174, 101, 180);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-to-cart-btn:hover {
+    background-color: #a5366e;
+  }
+
+  .reviews {
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    max-width: 1200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .reviews h3 {
+    color: rgb(174, 101, 180);
+  }
+
+  .review {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 3px solid rgb(174, 101, 180);
+  }
+
+  .review-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .review-form textarea,
+  .review-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .review-form button {
+    width: 100%;
+    background-color: rgb(174, 101, 180);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .review-form button:hover {
+    background-color: #a5366e;
+  }
+
+  footer {
+    background-color: #ffccd5;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .comparison-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .comparison-table th {
+    background-color: rgb(230, 182, 235);
+    ;
+    color: black;
+  }
+
+  .comparison-table td {
+    background-color: #fff;
+  }
+
+  .comparison-table tr:nth-child(even) td {
+    background-color: rgb(230, 182, 235);
+  }
+
+  @media screen and (max-width: 991px) {
+    .nav-container {
+      padding: 16px 48px;
+    }
+  
+    .nav-container h1 {
+      font-size: 25.6px;
+    }
+  
+    #linqet_e_navigimit {
+      flex-direction: column;
+      text-align: center;
+      width: 300px;
+      height: 100vh;
+      position: fixed;
+      top: 24px;
+      right: -300px;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 100000;
+      margin-top: 67.2px;
+      transition: 0.5s;
+    }
+    #signupBtn{
+      margin-left: 115px;
+    }
+  
+    #linqet_e_navigimit li {
+      padding-right: 0;
+      padding: 20px 0;
+    }
+  
+    #linqet_e_navigimit li a {
+      font-size: 19.2px;
+      color: white;
+      border: 2px solid white;
+    }
+  
+  
+  
+    #bar {
+      margin-right:20px;
+      display: initial;
+      cursor: pointer;
+    }
+  }
+    

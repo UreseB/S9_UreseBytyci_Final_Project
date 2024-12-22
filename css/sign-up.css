@@ -1,0 +1,97 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: #fcfcfc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  h1 {
+    text-align: center;
+    color: Black;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  input[type="submit"] {
+    background-color: rgb(192, 144, 173);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: rgb(174, 101, 180);
+  }
+
+  @media screen and (max-width: 991px) {
+    .nav-container {
+      padding: 16px 48px;
+    }
+  
+    .nav-container h1 {
+      font-size: 25.6px;
+    }
+  
+    #linqet_e_navigimit {
+      flex-direction: column;
+      text-align: center;
+      width: 300px;
+      height: 100vh;
+      position: fixed;
+      top: 24px;
+      right: -300px;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 100000;
+      margin-top: 67.2px;
+      transition: 0.5s;
+    }
+    #signupBtn{
+      margin-left: 115px;
+    }
+  
+    #linqet_e_navigimit li {
+      padding-right: 0;
+      padding: 20px 0;
+    }
+  
+    #linqet_e_navigimit li a {
+      font-size: 19.2px;
+      color: white;
+      border: 2px solid white;
+    }
+  
+  
+  
+    #bar {
+      margin-right:20px;
+      display: initial;
+      cursor: pointer;
+    }
+  }
+    
